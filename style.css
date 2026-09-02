@@ -138,6 +138,7 @@ a { color: inherit; text-decoration: none; }
 
 .hero-photo {
   flex: 0 0 340px;
+  margin: 1.5rem 0;
   border-left: 0.5px solid var(--border);
 }
 
@@ -501,13 +502,15 @@ a { color: inherit; text-decoration: none; }
 }
 
 .contact-links a {
+  display: block;
   font-size: 16px;
-  padding-bottom: 6px;
+  padding: 0.7rem 0;
   border-bottom: 0.5px solid var(--border);
-  width: fit-content;
 }
 
-.contact-links a:hover { border-color: var(--accent); }
+.contact-links a:last-child { border-bottom: none; }
+
+.contact-links a:hover { color: var(--accent); }
 
 .contact-note {
   color: var(--silver);
