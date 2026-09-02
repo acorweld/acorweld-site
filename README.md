@@ -1,22 +1,32 @@
-# Strona ACorWeld — wdrożenie na GitHub Pages
+# ACorWeld site — deployment status & full file set
 
-## Co jeszcze trzeba uzupełnić przed publikacją
-- **Sekcja Rekomendacje** (`index.html`, `id="rekomendacje"`) — 4 cytaty-placeholdery, w dwóch identycznych blokach (drugi to duplikat do pętli animacji). Podmień treść, autora i `src` zdjęcia w obu miejscach.
-- **Kontakt** — obecnie `kontakt@acorweld.com` i link LinkedIn z placeholderem `PODMIEN-LINK`. Podmień na prawdziwe dane.
-- **CV** — przyciski linkują do `cv-maciej-kochel.pdf`, którego nie ma w tym folderze. Wgraj plik PDF o tej nazwie do repozytorium (obok `index.html`) albo zmień link.
-- **Logo/baner** — na razie strona używa samego wordmarku tekstowego "ACORWELD" w nawigacji. Jeśli chcesz wstawić prawdziwe pliki `AcorWeld_logo.png` / baner, dodaj je do repo i podmień `.nav-logo` w `index.html` na `<img>`.
+## Status
+GitHub Pages and the acorweld.com domain (DNS at Hostinger) are already connected and were confirmed working earlier — that part is done. What's in this folder now is a **full update** on top of whatever is currently live in the `acorweld/acorweld-site` repo (still an early, Polish, placeholder version). Every file below should be uploaded, overwriting what's already there.
 
-## Wdrożenie na GitHub Pages
-1. Załóż nowe repozytorium na GitHub, np. `acorweld-site` (może być prywatne lub publiczne — dla Pages nie ma to znaczenia poza kontem darmowym, gdzie repo musi być publiczne).
-2. Wgraj do niego pliki z tego folderu: `index.html`, `style.css`, `script.js`, `CNAME` (oraz CV, gdy będzie gotowe).
-3. W repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, branch `main`, folder `/ (root)`.
-4. Po chwili GitHub poda adres typu `https://twoja-nazwa.github.io/acorweld-site` — to Twój tymczasowy adres, zanim zadziała domena.
+## Full file list
+Root of the repo:
+- `index.html` — full rewrite (English, new sections, SEO tags)
+- `style.css` — full rewrite (matches the new HTML structure)
+- `script.js` — unchanged since the very first version, but confirm it's actually in the repo
+- `CNAME` — unchanged (`acorweld.com`)
+- `robots.txt` — new
+- `sitemap.xml` — new
 
-## Podpięcie domeny acorweld.com (Hostinger)
-Plik `CNAME` w repo już zawiera `acorweld.com` — to mówi GitHub Pages, na jaką domenę ma reagować. Zostaje ustawić DNS u Hostingera:
+`assets/` subfolder:
+- `assets/logo.png`
+- `assets/hero-photo.jpg`
+- `assets/favicon.png`
 
-W hPanel Hostingera → Domeny → acorweld.com → DNS / Nameservery, dodaj:
-- 4 rekordy **A** dla `@` (czyli acorweld.com) wskazujące na adresy IP GitHub Pages: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-- 1 rekord **CNAME** dla `www` wskazujący na `twoja-nazwa.github.io`
+## How to upload (overwriting the existing repo)
+1. On your computer, create a folder, e.g. `acorweld-site`, and inside it a subfolder named exactly `assets`.
+2. Put the 6 root-level files into `acorweld-site`, and the 3 images into `acorweld-site/assets`.
+3. Go to `github.com/acorweld/acorweld-site` → **Add file → Upload files**.
+4. Drag in everything from your local `acorweld-site` folder (including the `assets` subfolder — GitHub preserves the folder structure when you drop a folder in).
+5. GitHub will show which files are being **replaced** (same filename as what's already in the repo) versus **added** (new, like `robots.txt`, `sitemap.xml`, and everything in `assets/`) — that's expected and correct.
+6. Scroll down, add a short commit message (e.g. "English rewrite + real assets + SEO"), click **Commit changes**.
+7. Check the **Actions** tab — wait for the green checkmark, then visit acorweld.com to confirm.
 
-Propagacja DNS: zwykle do kilku godzin, czasem do 24h. Po propagacji w Settings → Pages GitHub pokaże domenę jako zweryfikowaną — wtedy warto zaznaczyć tam też "Enforce HTTPS".
+## Still needs your input before this is fully finished
+- **CV** — buttons link to `cv-maciej-kochel.pdf`, which doesn't exist yet in the repo. Upload it (same filename, repo root) once ready.
+- **LinkedIn URL** — still a placeholder (`PODMIEN-LINK`) in two spots in `index.html`: the Contact section and the structured-data block in `<head>`.
+- **EN 1090 EXC3 vs EXC4** for the HD Iceland entry — sources disagreed, so the site currently just says "EN 1090" without the class number. Confirm the correct one and I'll add it back.
