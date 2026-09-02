@@ -62,17 +62,17 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-head);
-  font-weight: 600;
-  font-size: 19px;
-  letter-spacing: 0.03em;
-  color: var(--text);
 }
-
-.nav-logo span { color: var(--accent); }
 
 .nav-logo-icon {
   height: 30px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-logo-wordmark {
+  height: 22px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -132,7 +132,7 @@ a { color: inherit; text-decoration: none; }
 
 .hero-inner {
   max-width: 620px;
-  padding: 6rem 0 5rem;
+  padding: 3.5rem 0 3rem;
   flex: 1 1 auto;
 }
 
@@ -373,8 +373,11 @@ a { color: inherit; text-decoration: none; }
 .stamps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  align-items: stretch;
   gap: 1.25rem;
 }
+
+.stamps-group-spacer { margin-top: 2.5rem; }
 
 .stamp {
   border: 1px solid var(--border);
@@ -559,6 +562,12 @@ a { color: inherit; text-decoration: none; }
 
 .form-group select {
   color-scheme: dark;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23BDC3C7' stroke-width='1.5' d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  padding-right: 2.5rem;
 }
 
 .hp-field {
@@ -626,5 +635,5 @@ a { color: inherit; text-decoration: none; }
 
   .section { padding: 3.5rem 0; }
 
-  .hero-inner { padding: 4rem 0 3rem; }
+  .hero-inner { padding: 3rem 0 2.5rem; }
 }
