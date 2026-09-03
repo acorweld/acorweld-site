@@ -21,7 +21,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 
@@ -56,7 +56,7 @@
       <a href="#testimonials">Testimonials</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -88,7 +88,7 @@
         <div class="section-body">
           <p>I'm a welding and coating inspector with over a decade in structural steel — from military engineering vehicles and rail rolling stock to offshore wind foundations. I started in design and process engineering, moved through welding coordination and quality-system building for industrial fabricators, and progressed to Principal Welding Engineer roles managing multiple branches and dozens of welders.</p>
           <p>Today I work client-side as a Primary Steel Welding Engineer on one of the North Sea's major offshore wind projects, while building a parallel specialisation in corrosion protection and coating inspection — so I can follow a structure's full quality story, not just half of it.</p>
-          <blockquote class="pull-quote">There's no room for "it'll probably be fine" in industrial quality control. My approach is simple: no compromises. I hold welding and corrosion-protection work to the same standard, so the structures I sign off on are safe, standards-compliant, and built to outlast their design life.</blockquote>
+          <p class="pull-quote">There's no room for "it'll probably be fine" in industrial quality control. My approach is simple: no compromises. I hold welding and corrosion-protection work to the same standard, so the structures I sign off on are safe, standards-compliant, and built to outlast their design life.</p>
           <p class="section-lead">What that combination means for you:</p>
           <ul class="check-list">
             <li><strong>One point of contact, not two handovers</strong> — the same person who checks your welds also checks the surface prep and coating that protects them.</li>
@@ -155,10 +155,10 @@
       <div class="also-worked">
         <p class="section-lead">Also worked with</p>
         <ul class="condensed-list">
-          <li><strong>Welding Alloys</strong> <span class="timeline-muted">Aug 2020 – Sep 2021</span> — Quality supervision, hardfacing &amp; cladding, EN 10204 certification</li>
-          <li><strong>KONPEA</strong> <span class="timeline-muted">Jan 2019 – Jun 2020</span> — Welding coordinator (IWE), built the plant's ISO 3834 / EN 15085 quality system from scratch</li>
-          <li><strong>Alstom Chorzów</strong> <span class="timeline-muted">(formerly Konstal) · Nov 2017 – Dec 2018</span> — Welding technologist, Coradia Stream rolling stock for Trenitalia</li>
-          <li><strong>OBRUM</strong> <span class="timeline-muted">(PGZ Group) · May 2015 – Nov 2017</span> — Design engineer, welded structures for military engineering vehicles</li>
+          <li><strong>Welding Alloys</strong> <span class="timeline-muted">Aug 2020 — Sep 2021</span> — Quality supervision, hardfacing &amp; cladding, EN 10204 certification</li>
+          <li><strong>KONPEA</strong> <span class="timeline-muted">Jan 2019 — Jun 2020</span> — Welding coordinator (IWE), built the plant's ISO 3834 / EN 15085 quality system from scratch</li>
+          <li><strong>Alstom Chorzów</strong> <span class="timeline-muted">(formerly Konstal) · Nov 2017 — Dec 2018</span> — Welding technologist, Coradia Stream rolling stock for Trenitalia</li>
+          <li><strong>OBRUM</strong> <span class="timeline-muted">(PGZ Group) · May 2015 — Nov 2017</span> — Design engineer, welded structures for military engineering vehicles</li>
         </ul>
       </div>
     </div>
@@ -166,7 +166,7 @@
 
   <section id="industries" class="section">
     <div class="container">
-      <h2>Industries</h2>
+      <h2>Industries Served</h2>
       <div class="services">
         <div class="service">
           <h3>Offshore Wind</h3>
@@ -250,7 +250,7 @@
   <section id="services" class="section">
     <div class="container">
       <p class="section-kicker">Welding Supervision · Surface Treatment · Process Management</p>
-      <h2>Services</h2>
+      <h2>Welding &amp; Coating Inspection Services</h2>
       <div class="services services-6">
         <div class="service">
           <h3>Welding Inspection &amp; Supervision</h3>
@@ -317,18 +317,22 @@
           <p class="hero-sub">Currently committed through the end of 2026 for long-term engagements — open to discussing new major projects starting 2027. Short-term audits and urgent inspections available on request.</p>
           <div class="hero-actions contact-actions">
             <a href="https://calendly.com/acorweld/30min" target="_blank" rel="noopener" class="btn btn-primary">Schedule a 30-min Intro Call</a>
-            <a href="cv-maciej-kochel.pdf" target="_blank" class="btn btn-ghost">Download CV (PDF)</a>
+            <a href="cv-maciej-kochel.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download CV (PDF)</a>
           </div>
           <div class="contact-links">
-            <a href="mailto:maciej.kochel@acorweld.com">maciej.kochel@acorweld.com</a>
-            <a href="tel:+48606307383">+48 606 307 383</a>
-            <a href="https://www.linkedin.com/in/maciej-kochel/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:maciej.kochel@acorweld.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>maciej.kochel@acorweld.com</a>
+            <a href="tel:+48606307383"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3.5l1.5 5-2.3 1.4a11.5 11.5 0 0 0 5.4 5.4L14.5 13l5 1.5V18a2 2 0 0 1-2 2A15 15 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>+48 606 307 383</a>
+            <a href="https://www.linkedin.com/in/maciej-kochel/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>LinkedIn</a>
           </div>
+          <a href="https://s.blinq.me/pIFzY1gbarcE?bs=db&amp;ida_v=treatment" target="_blank" rel="noopener" class="contact-qr">
+            <img src="assets/qr-blinq.png" alt="QR code linking to Maciej Kochel's digital business card">
+            <span>Scan to save my contact</span>
+          </a>
           <p class="contact-note">For documentation exceeding 10 MB (CAD drawings, WPS specifications), please send files directly via email or WeTransfer.</p>
         </div>
 
-        <form action="https://formspree.io/f/TWOJ_FORM_ID" method="POST" class="contact-form">
-          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off">
+        <form action="https://formspree.io/f/mljenazq" method="POST" class="contact-form">
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <div class="form-group">
             <label for="cf-name">Name / Company</label>
