@@ -516,7 +516,6 @@ button:focus-visible {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   grid-template-areas:
-    "intro  ."
     "info   form"
     "qr     footer";
   column-gap: 2.5rem;
@@ -524,13 +523,22 @@ button:focus-visible {
   align-items: start;
 }
 
-.contact-intro { grid-area: intro; margin: 0; }
-.contact-info { grid-area: info; min-width: 0; align-self: center; }
+.contact-info {
+  grid-area: info;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  height: 100%;
+}
 .contact-form { grid-area: form; }
 .contact-form-footer { grid-area: footer; display: flex; flex-direction: column; }
 
+.contact-info .hero-sub { margin-bottom: 0; }
+
 .contact-actions {
-  margin: 0.5rem 0 2rem;
+  margin: 0;
   flex-direction: column;
   align-items: stretch;
 }
@@ -707,11 +715,16 @@ button:focus-visible {
   .contact-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "intro"
       "info"
       "form"
       "qr"
       "footer";
+  }
+
+  .contact-info {
+    height: auto;
+    justify-content: flex-start;
+    gap: 1.5rem;
   }
 
   .section { padding: 3.5rem 0; }
