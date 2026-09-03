@@ -546,7 +546,6 @@ button:focus-visible {
   color: var(--silver);
   font-size: 13px;
   margin-top: 2rem;
-  max-width: 48ch;
 }
 
 .contact-qr {
@@ -585,7 +584,7 @@ button:focus-visible {
 .form-group label {
   display: block;
   color: var(--silver);
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 0.5rem;
 }
 
@@ -599,7 +598,7 @@ button:focus-visible {
   padding: 0.7rem 0.9rem;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 14.5px;
+  font-size: 16px;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
