@@ -405,6 +405,7 @@ button:focus-visible {
 
 .stamp-mark {
   display: inline-block;
+  align-self: flex-start;
   font-family: var(--font-head);
   font-size: 13px;
   font-weight: 600;
@@ -471,6 +472,8 @@ button:focus-visible {
   border-radius: 4px;
   padding: 1.75rem;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial-card p {
@@ -484,6 +487,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+  margin-top: auto;
 }
 
 .testimonial-card footer strong {
