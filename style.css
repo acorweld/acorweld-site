@@ -310,83 +310,130 @@ button:focus-visible {
 }
 
 /* Timeline */
-.timeline {
-  list-style: none;
-  position: relative;
-  --date-col: 140px;
+.feature-record {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: calc(var(--date-col) + 1rem);
-  top: 1.9rem;
-  bottom: 1.9rem;
-  width: 1px;
-  background: #4A4F54;
-}
-
-.timeline-item {
-  position: relative;
-  display: grid;
-  grid-template-columns: var(--date-col) 1fr;
-  gap: 2rem;
-  padding: 1.75rem 0;
-  border-top: 0.5px solid var(--border);
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: calc(var(--date-col) + 1rem - 5px);
-  top: 1.9rem;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 3px solid var(--bg-deep);
-  z-index: 1;
-}
-
-.timeline-item:first-child { border-top: none; }
-
-.timeline-date {
-  font-family: var(--font-head);
-  font-size: 14px;
+.feature-tag {
+  display: inline-block;
   color: var(--accent);
-  padding-top: 0.2rem;
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.5rem;
 }
 
-.timeline-content {
-  grid-column: 2;
+.feature-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2.5rem;
 }
 
-.timeline-content h3 {
-  font-size: 19px;
+.feature-stat {
+  display: flex;
+  flex-direction: column;
+  border-right: 0.5px solid var(--border);
+  padding-right: 2.5rem;
+}
+
+.feature-stat-number {
+  font-family: var(--font-head);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.feature-stat-label {
+  color: var(--text);
+  font-size: 14px;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.feature-stat-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.feature-stat-details span {
+  color: var(--silver);
+  font-size: 13px;
+  padding-left: 0.9rem;
+  position: relative;
+}
+
+.feature-stat-details span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+}
+
+.feature-body h3 {
+  font-size: 21px;
   margin-bottom: 0.3rem;
 }
 
-.timeline-muted {
+.feature-body p:not(.record-role) {
+  color: var(--silver);
+  font-size: 15px;
+  max-width: 62ch;
+}
+
+.record-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.record-card {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+.record-stat {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.9rem;
+}
+
+.record-card h3 {
+  font-size: 18px;
+  margin-bottom: 0.3rem;
+}
+
+.record-card p:not(.record-role) {
+  color: var(--silver);
+  font-size: 14.5px;
+}
+
+.muted-inline {
   color: var(--silver);
   font-weight: 400;
   font-size: 15px;
 }
 
-.timeline-role {
+.record-role {
   color: var(--silver);
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 0.6rem;
 }
 
-.timeline-content p:not(.timeline-role) {
-  color: var(--silver);
-  font-size: 15px;
-  max-width: 62ch;
-}
-
 .also-worked {
-  margin-top: 1rem;
+  margin-top: 2.5rem;
   padding-top: 2rem;
   border-top: 0.5px solid var(--border);
 }
@@ -421,6 +468,16 @@ button:focus-visible {
   padding: 1.5rem 1.25rem;
   position: relative;
 }
+
+.stamp-link {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.stamp-link:hover { color: var(--text); }
 
 .stamp-mark {
   display: inline-block;
@@ -684,6 +741,16 @@ button:focus-visible {
 @media (max-width: 900px) {
   .hero-photo { display: none; }
 
+  .feature-grid { grid-template-columns: 1fr; }
+
+  .feature-stat {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 0.5px solid var(--border);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
   .nav-links {
     position: fixed;
     top: 64px;
@@ -701,11 +768,6 @@ button:focus-visible {
   .nav-links.open { display: flex; }
 
   .nav-toggle { display: flex; }
-
-  .timeline::before,
-  .timeline-item::before { display: none; }
-
-  .timeline-item { grid-template-columns: 1fr; gap: 0.4rem; }
 
   .contact-grid { grid-template-columns: 1fr; }
 
