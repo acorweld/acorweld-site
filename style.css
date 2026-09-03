@@ -388,6 +388,8 @@ button:focus-visible {
   border-radius: 4px;
   padding: 1.5rem 1.25rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .stamp-link {
@@ -395,7 +397,8 @@ button:focus-visible {
   color: var(--accent);
   font-size: 13px;
   font-weight: 500;
-  margin-top: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .stamp-link:hover { color: var(--text); }
@@ -524,10 +527,7 @@ button:focus-visible {
   gap: 0.7rem;
   font-size: 16px;
   padding: 0.7rem 0;
-  border-bottom: 0.5px solid var(--border);
 }
-
-.contact-links a:last-child { border-bottom: none; }
 
 .contact-links a:hover { color: var(--accent); }
 
