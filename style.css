@@ -310,113 +310,34 @@ button:focus-visible {
 }
 
 /* Timeline */
-.feature-record {
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
-}
+.record-list { list-style: none; }
 
-.feature-tag {
-  display: inline-block;
-  color: var(--accent);
-  font-family: var(--font-head);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  margin-bottom: 1.5rem;
-}
-
-.feature-grid {
+.record-row {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 140px 1fr;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  border-top: 0.5px solid var(--border);
 }
 
-.feature-stat {
-  display: flex;
-  flex-direction: column;
-  border-right: 0.5px solid var(--border);
-  padding-right: 2.5rem;
-}
+.record-row:first-child { border-top: none; }
 
-.feature-stat-number {
+.record-date {
   font-family: var(--font-head);
-  font-size: 3rem;
-  font-weight: 600;
-  color: var(--accent);
-  line-height: 1;
-}
-
-.feature-stat-label {
-  color: var(--text);
   font-size: 14px;
-  margin: 0.5rem 0 1.25rem;
+  color: var(--accent);
+  padding-top: 0.2rem;
 }
 
-.feature-stat-details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.feature-stat-details span {
-  color: var(--silver);
-  font-size: 13px;
-  padding-left: 0.9rem;
-  position: relative;
-}
-
-.feature-stat-details span::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.5em;
-  width: 5px;
-  height: 5px;
-  background: var(--accent);
-}
-
-.feature-body h3 {
-  font-size: 21px;
+.record-body h3 {
+  font-size: 19px;
   margin-bottom: 0.3rem;
 }
 
-.feature-body p:not(.record-role) {
+.record-body p:not(.record-role) {
   color: var(--silver);
   font-size: 15px;
   max-width: 62ch;
-}
-
-.record-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-}
-
-.record-card {
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 1.5rem;
-}
-
-.record-stat {
-  display: block;
-  font-family: var(--font-head);
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 0.9rem;
-}
-
-.record-card h3 {
-  font-size: 18px;
-  margin-bottom: 0.3rem;
-}
-
-.record-card p:not(.record-role) {
-  color: var(--silver);
-  font-size: 14.5px;
 }
 
 .muted-inline {
@@ -487,7 +408,7 @@ button:focus-visible {
   letter-spacing: 0.05em;
   color: var(--accent);
   border: 1.5px solid var(--accent);
-  border-radius: 3px;
+  border-radius: 4px;
   padding: 3px 9px;
   margin-bottom: 1rem;
 }
@@ -741,15 +662,7 @@ button:focus-visible {
 @media (max-width: 900px) {
   .hero-photo { display: none; }
 
-  .feature-grid { grid-template-columns: 1fr; }
-
-  .feature-stat {
-    border-right: none;
-    padding-right: 0;
-    border-bottom: 0.5px solid var(--border);
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
+  .record-row { grid-template-columns: 1fr; gap: 0.4rem; }
 
   .nav-links {
     position: fixed;
