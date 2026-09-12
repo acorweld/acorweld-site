@@ -144,7 +144,7 @@ button:focus-visible {
 
 .hero-photo {
   flex: 0 0 300px;
-  aspect-ratio: 712 / 1050;
+  aspect-ratio: 669 / 1080;
   align-self: flex-start;
   margin: 3.5rem 0 1.5rem;
   border-left: 0.5px solid var(--border);
