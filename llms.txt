@@ -21,8 +21,8 @@ Welding inspection and supervision; coating and corrosion-protection inspection;
 Offshore wind, energy and petrochemical, waste-to-energy, automotive and industrial construction, rail and heavy fabrication.
 
 ## Key pages
-- Homepage and full profile: https://acorweld.com/
-- Track record: https://acorweld.com/#track-record
-- Certifications: https://acorweld.com/#certifications
-- Services: https://acorweld.com/#services
-- Contact: https://acorweld.com/#contact
+- [Homepage and full profile](https://acorweld.com/)
+- [Track record](https://acorweld.com/#track-record)
+- [Certifications](https://acorweld.com/#certifications)
+- [Services](https://acorweld.com/#services)
+- [Contact](https://acorweld.com/#contact)

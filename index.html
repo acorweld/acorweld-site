@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maciej Kochel | ACorWeld — Welding & Coating Inspector, IWE, FROSIO III</title>
-<meta name="description" content="Client-side welding and coating inspector combining IWE and FROSIO Level III qualifications. Third-party inspection, NDT and quality systems for offshore wind, energy and heavy industry projects across Europe.">
+<title>Maciej Kochel — Welding & Coating Inspector, IWE, FROSIO III</title>
+<meta name="description" content="Independent welding and coating inspector — IWE and FROSIO Level III certified. Third-party inspection, NDT and quality systems across Europe.">
 <link rel="canonical" href="https://acorweld.com/">
 
 <meta property="og:type" content="website">
@@ -19,11 +19,11 @@
 <meta name="twitter:description" content="Client-side welding and coating inspector combining IWE and FROSIO Level III qualifications. Third-party inspection for offshore wind, energy and heavy industry.">
 <meta name="twitter:image" content="https://acorweld.com/assets/maciej-kochel-welding-coating-inspector.jpg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/oswald-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/oswald-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
 <script type="application/ld+json">
 {
@@ -33,7 +33,6 @@
   "jobTitle": "Welding & Coating Inspector",
   "url": "https://acorweld.com/",
   "image": "https://acorweld.com/assets/maciej-kochel-welding-coating-inspector.jpg",
-  "email": "mailto:maciej.kochel@acorweld.com",
   "telephone": "+48606307383",
   "worksFor": { "@type": "Organization", "name": "ACorWeld", "url": "https://acorweld.com/" },
   "knowsAbout": ["Welding Inspection", "Coating Inspection", "Corrosion Protection", "Quality Assurance", "Non-Destructive Testing", "Third-Party Inspection"],
@@ -49,7 +48,7 @@
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#hero" class="nav-logo"><img src="assets/logo-mark.png" alt="" class="nav-logo-icon" width="130" height="60"><img src="assets/wordmark.png" alt="ACorWeld" class="nav-logo-wordmark" width="325" height="44"></a>
+    <a href="#hero" class="nav-logo"><img src="assets/logo-mark.webp" alt="" class="nav-logo-icon" width="130" height="60"><img src="assets/wordmark.webp" alt="ACorWeld" class="nav-logo-wordmark" width="325" height="44"></a>
     <nav class="nav-links" id="nav-links">
       <a href="#about">About</a>
       <a href="#track-record">Track Record</a>
@@ -75,7 +74,7 @@
         <p class="hero-role">Welding &amp; Coating Inspector · International Welding Engineer · FROSIO Level III · QA/QC · NDT Level 2</p>
         <p class="hero-sub">Most projects treat welding and corrosion protection as two separate disciplines, checked at two different stages — exactly where non-conformities slip through and claims start later. I cover both, so your structure is checked as one continuous quality story.</p>
       </div>
-      <div class="hero-photo" aria-hidden="true"><img src="assets/maciej-kochel-welding-coating-inspector.jpg" alt="Maciej Kochel, independent welding and coating inspector, FROSIO and IWE certified" width="669" height="1050"></div>
+      <div class="hero-photo" aria-hidden="true"><img src="assets/maciej-kochel-welding-coating-inspector.webp" alt="Maciej Kochel, independent welding and coating inspector, FROSIO and IWE certified" width="669" height="1050" fetchpriority="high"></div>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Get in Touch</a>
         <a href="assets/cv-maciej-kochel.pdf" target="_blank" rel="noopener" class="btn btn-ghost">View CV</a>
@@ -332,23 +331,25 @@
           </div>
         </div>
 
-        <form id="contact-form" action="https://formspree.io/f/mljenazq" method="POST" class="contact-form">
+        <form id="contact-form" action="https://formspree.io/f/mljenazq" method="POST" class="contact-form"
+              toolname="sendInspectionInquiry"
+              tooldescription="Sends a project inquiry to Maciej Kochel, an independent welding and coating inspector, including contact details, the inspection service needed, and project information. A human reviews and sends the form; it is not submitted automatically.">
           <input type="hidden" name="_next" value="https://acorweld.com/thanks.html">
           <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <div class="form-group">
             <label for="cf-name">Name / Company</label>
-            <input type="text" id="cf-name" name="name" required>
+            <input type="text" id="cf-name" name="name" required toolparamdescription="Full name of the person or company making the inquiry">
           </div>
 
           <div class="form-group">
             <label for="cf-email">Email Address</label>
-            <input type="email" id="cf-email" name="email" required>
+            <input type="email" id="cf-email" name="email" required toolparamdescription="Email address to reply to with a response">
           </div>
 
           <div class="form-group">
             <label for="cf-scope">Service Scope</label>
-            <select id="cf-scope" name="service_scope">
+            <select id="cf-scope" name="service_scope" toolparamdescription="Type of inspection or quality service needed">
               <option value="">Select an option</option>
               <option>Welding Inspection</option>
               <option>Coating Inspection (FROSIO)</option>
@@ -361,7 +362,7 @@
 
           <div class="form-group">
             <label for="cf-details">Project Details</label>
-            <textarea id="cf-details" name="message" rows="5" required></textarea>
+            <textarea id="cf-details" name="message" rows="5" required toolparamdescription="Project scope, location, timeline, and any specific requirements"></textarea>
           </div>
         </form>
 
