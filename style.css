@@ -131,22 +131,25 @@ button:focus-visible {
 }
 
 .hero-flex {
-  display: flex;
-  align-items: stretch;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-areas:
+    "text    photo"
+    "actions .";
+  column-gap: 3rem;
+  row-gap: 2rem;
+  align-items: start;
+  padding: 3.5rem 0 3rem;
 }
 
-.hero-inner {
+.hero-text {
+  grid-area: text;
   max-width: 620px;
-  padding: 3.5rem 0 3rem;
-  flex: 1 1 auto;
 }
 
 .hero-photo {
-  flex: 0 0 300px;
-  aspect-ratio: 669 / 1080;
-  align-self: flex-start;
-  margin: 3.5rem 0 1.5rem;
+  grid-area: photo;
+  align-self: stretch;
   border-left: 0.5px solid var(--border);
   border-radius: 4px;
   overflow: hidden;
@@ -186,6 +189,7 @@ button:focus-visible {
 }
 
 .hero-actions {
+  grid-area: actions;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
@@ -721,6 +725,14 @@ button:focus-visible {
 @media (max-width: 900px) {
   .hero-photo { display: none; }
 
+  .hero-flex {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "actions";
+    padding: 3rem 0 2.5rem;
+  }
+
   .record-row { grid-template-columns: 1fr; gap: 0.4rem; }
 
   .nav-links {
@@ -757,6 +769,4 @@ button:focus-visible {
   }
 
   .section { padding: 3.5rem 0; }
-
-  .hero-inner { padding: 3rem 0 2.5rem; }
 }
